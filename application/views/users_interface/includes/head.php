@@ -17,5 +17,6 @@
 	<!--[if (lt IE 9) & (!IEMobile)]>
 	<link rel="stylesheet" href="<?=$baseurl;?>css/layout.css" media="all">
 	<![endif]-->
+	<link rel="stylesheet" href="<?=$baseurl;?>css/new-style.css" media="all">
 	<script src="<?=$baseurl;?>js/libs/modernizr-1.7.min.js"></script>
 </head>

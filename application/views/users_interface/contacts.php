@@ -25,6 +25,9 @@
 								<p>www.rostov-sk.com</p>
 							</address>
 							<h2>Обратная связь</h2>
+							<?php $this->load->view("alert_messages/alert-error");?>
+							<?php $this->load->view("alert_messages/alert-success");?>
+							<div id="message_box"></div>
 							<?php $this->load->view("forms/frmcontact");?>
 						</div>
 						<div class="column half">
@@ -47,6 +50,18 @@
 			</article>
 		</div>
 		<?php $this->load->view("users_interface/includes/scripts");?>
-		
+		<script type="text/javascript">
+			$("#submit").click(function(event){
+				var err = false;
+				$(".inpval").removeClass('empty-error');
+				$("#msgdealert").remove();
+				var email = $("#email").val();
+				var phone = $("#phone").val();
+				$(".inpval").each(function(i,element){if($(this).val()==''){err = true;$(this).addClass('empty-error');}});
+				if(err){$("#message_box").html('<div class="alert alert-error">Поля не могут быть пустыми</div>'); event.preventDefault();};
+				if(!err && !isValidEmailAddress(email)){$("#message_box").html('<div class="alert alert-error">Не верный адрес E-Mail</div>');$("#email").addClass('empty-error');err = true; event.preventDefault();}
+				if(!err && !isValidPhone(phone)){$("#message_box").html('<div class="alert alert-error">Не верный номер телефона</div>');$("#phone").addClass('empty-error');err = true; event.preventDefault();}
+			});
+		</script>
 	</body>
 </html>

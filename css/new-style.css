@@ -1,0 +1,100 @@
+.actpage{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ff0000;
+	margin: 0 3px 0 7px;
+}
+
+.admin-header { color: #4D4D4D; font-size: 24px; margin: 1em 0; text-transform: uppercase; } 
+.admin-header .small { color: #999; font-size: 16px; font-weight: normal; margin-left: 0.5em; text-transform: none; }
+
+.w100{width: 100px;}
+.w110{width: 110px;}
+.w130{width: 130px;}
+.w200{width: 200px;}
+.w85{width: 85px;}
+.w30{width: 30px;}
+.w600{width: 600px;}
+.w50{width: 50px;}
+.w10{width: 10px;}
+
+.inpval.empty-error {
+	background: none repeat scroll 0 0 #F2DEDE;
+}
+#message_box{
+	margin: 0.25em 0;
+	font-size: 1em;
+}
+
+.alert {
+	background-color: #FCF8E3;
+	border: 1px solid #FBEED5;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	font-size: 0.85em;
+	margin: 0 0 0.5em;
+	padding: 0.25em 0.75em;
+	width: 20.4em;	
+}
+.alert, .alert-heading {
+	color: #C09853;
+}
+.alert .close {
+	line-height: 18px;
+	position: relative;
+	right: -21px;
+	top: -2px;
+}
+.alert-success {
+	background-color: #DFF0D8;
+	border-color: #D6E9C6;
+}
+.alert-success, .alert-success .alert-heading {
+	color: #468847;
+}
+.alert-danger, .alert-error {
+	background-color: #F2DEDE;
+	border-color: #EED3D7;
+}
+.alert-danger, .alert-error, .alert-danger .alert-heading, .alert-error .alert-heading {
+	color: #B94A48;
+}
+.alert-info {
+	background-color: #D9EDF7;
+border-color: #BCE8F1;
+}
+.alert-info, .alert-info .alert-heading {
+	color: #3A87AD;
+}
+.alert-block {
+	padding-bottom: 14px;
+	padding-top: 14px;
+}
+.alert-block > p, .alert-block > ul {
+	margin-bottom: 0;
+}
+.alert-block p + p {
+	margin-top: 5px;
+}
+.inpval.empty-error {
+	background: none repeat scroll 0 0 #F2DEDE;
+}
+
+.close {
+	color: #000000;
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 18px;
+	text-decoration: none;
+	cursor:pointer;
+	opacity: 0.2;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0
+}

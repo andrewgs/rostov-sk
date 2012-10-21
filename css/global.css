@@ -1,0 +1,258 @@
+/*
+Goldilocks Approach to Responsive Web Design Boilerplate
+
+Author: Design by Front - @designbyfront
+Version: 0.1
+URL: http://www.goldilocksapproach.com
+----------------------------------------------------------------------------------------
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. RESET
+2. ROOT
+3. CORE TYPOGRAPHY
+4. LINKS
+5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+7. BROWSER AND NON-SEMANTIC STYLING
+
+CONTENTS - LAYOUT.CSS
+-----------------------------------------
+8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+
+*/
+
+
+/* 1. RESET
+----------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size:100%;
+  font: inherit;
+  vertical-align: baseline;
+  }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
+  
+  
+/* 2. ROOT
+----------------------------------------------------------------------------------------*/
+html { 
+  overflow-y: scroll;
+  background: #FFF;
+  }
+
+/* /ht Ethan Marcotte - http://front.ie/l8rJaA */
+img, embed, object, video { max-width: 100%; }
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video { width: 100%; }
+
+
+/* 3. CORE TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1em;
+  line-height: 1.618em;
+  color: #333;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.809em;
+  line-height: 1em;
+  }
+
+p, ul, ol, dl, blockquote {
+    font-size: 1em;
+    line-height: 1.618em;
+    margin-bottom: 1.618em; 
+    max-width: 30em; /* Optimal width for long-form text */
+  }
+    
+ul { list-style-type: disc; margin-left: 1.618em; }
+ol { list-style-type: decimal; margin-left: 1.618em; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0;}
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+small { font-size: 80%; }
+
+
+/* 4. LINKS
+----------------------------------------------------------------------------------------*/
+a, a:visited { outline: none; text-decoration: underline; }  
+a:hover { outline: none; text-decoration:none; }  
+a:active, a:focus { outline: none; }
+
+
+/* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+html, body { background: url('../images/body-pattern.jpg') repeat 0 0 #bfc7d9; color: #333; font-family: 'PT Sans', "Times New Roman", Times, serif; padding: 0.75em 0 4em; }
+.container { background: url('../images/body-bg.jpg') no-repeat center 0.5em #fff; -webkit-box-shadow: 0px 0px 15px #ccc; -moz-box-shadow: 0px 0px 15px #ccc; box-shadow: 0px 0px 15px #ccc; }
+body.inside .container { background: url('../images/body-bg-inside.jpg') no-repeat center 0.5em #fff; }
+h1 { color: #4D4D4D; font: bold 27px 'Pt Sans', "Times New Roman", Times, serif; margin: 1.5em 0 0.7em; }
+h2, h3 { font-size: 17px; font-weight: bold; margin-bottom: 1em; }
+h3 { color: #114e9f; margin-bottom: 0.05em; }
+h4 { border-bottom: 1px solid; font-weight: bold; display: inline-block; line-height: 1em; }
+p { font: 0.8em/1.4em 'PT Sans', "Times New Roman", Times, serif; margin-bottom: 1em; max-width: 50em; }
+aside p { margin-bottom: 1.25em; }
+aside p a { margin-bottom: 0.75em; display: inline-block; }
+
+header { height: 105px; }
+body.inside header { margin-bottom: 3em; }
+header #logo { 
+	background: url("../images/logo.png") no-repeat scroll 1.8em center #4B7CB7;
+	-webkit-border-radius: 2px 0 0 2px;
+	-moz-border-radius: 2px 0 0 2px;
+	border-radius: 2px 0 0 2px;
+	color: #f0f0f0;
+	display: block;
+	float: left;
+	font-size: 0.9em;
+	height: 44px;
+	left: -52px;
+	margin: 0.6em 0 0 1.25em;
+	padding: 61px 0 0 6.5em;
+	position: relative;
+	text-decoration: none;
+	top: 0;
+	width: 7.65em;
+	-webkit-text-shadow: 0 1px 0 #666;
+	-moz-text-shadow: 0 1px 0 #666;
+	text-shadow: 0 1px 0 #666;
+} 
+header nav ul { float: left; list-style: none; margin: 0; padding: 0; width: 32em; height: 105px; background: url('../images/menu-stripes.png') 4.1em bottom no-repeat; margin: 0 0 0 -1em; }
+	header nav ul li { float: left; margin: 4.4em 0.9em 0 0.7em; }
+	header nav ul li a { display: inline-block; font: bold 14px/21px 'PT Sans', "Times New Roman", Times, serif; color: #999; text-decoration: none; text-transform: uppercase; }
+	header nav ul li.active a { color: #114e9e; }
+	header nav ul li a:hover { color: #444; }
+.top-contacts { 
+	background: none repeat scroll 0 0 #4B7CB7;
+	-webkit-border-radius: 0 2px 2px 0;
+   	   -moz-border-radius: 0 2px 2px 0;
+			border-radius: 0 2px 2px 0;
+	color: #fff;
+	float: left;
+	height: 92px;
+	margin: 8px 0 0;
+	padding: 13px 2.5em 0 0;
+	position: relative;
+	right: -4.7em;
+	top: 0;
+	width: 16.1em;
+	-webkit-text-shadow: 0 1px 0 #666;
+	-moz-text-shadow: 0 1px 0 #666;
+	text-shadow: 0 1px 0 #666;	
+}
+.top-contacts a { color: #fff; }
+
+.infographics { margin: 1.25em 0 6em 1.5em; position: relative; width: 38em; }
+.infographics .clients { position: absolute; top: 6.15em; right: 3.25em; list-style: none; padding: 0; margin: 0; }
+.infographics .clients li { color: #7295AB; font-size: 0.725em; font-family: georgia, serif; line-height: 2.1em; text-align: right; }
+#main aside { width: 21em; float: right; clear: right; margin: 0.5em 0 0; }
+
+ul.proposals { list-style: none; margin: 0 0 9em; padding: 0; } 
+ul.proposals li { color: #95b7cc; font: 0.7em/3em Arial, Helvetica, sans-serif; }
+ul.proposals li a { color: #333; font-size: 13px; text-decoration: none; border-bottom: 1px solid; margin-right: 0.5em; display: inline-block; line-height: 1em; }
+
+.news { height: 15em; position: relative; }
+.news .prelog { float: left; width: 10em; height: 14em; padding-top: 3em; }
+.news .prelog a { color: #333; line-height: 0.8em; text-decoration: none; border-bottom: 1px solid; font-size: 0.85em; }
+.news ul { list-style: none; margin: 0; padding: 0; float: left; max-width: 50em; }
+.news ul li { float: left; border-left: 1px solid #CFCFCF; padding-left: 0.5em; width: 15em; margin-left: 1em; }
+.news ul li p { margin-bottom: 0.5em; }
+.read-more { color: #999; font-size: 0.8em; text-decoration: none; line-height: 0.9em; border-bottom: 1px solid; margin-bottom: 0.75em; display: inline-block; }
+
+.prelog.objects { width: 23em; position: absolute; right: 1.25em; top: -19.5em; }
+.prelog.objects h3 { margin-top: 8.7em; }
+.prelog.objects .object-aside { float: right; position: relative; }
+.prelog.objects .object-overlay { height: 2em; position: absolute; bottom: 7px; left: 0; background: rgba(182, 182, 182, 0.75); width: 14.5em; color: #333; font-size: 0.9em; line-height: 2em; padding: 0 1em; }
+
+footer { color: #999; margin: 4em 0 0; }
+footer .graphema { color: #999; font-size: 0.8em; line-height: 1em; float: right; display: block; text-decoration: none; }
+
+.left { float: left; }
+.right { float: right; }
+.margin { display: inline-block; width: 2.25em; }
+
+/* inside pages */
+#main aside.inside { float: left; position: relative; width: 18em; }
+.inside .sub-nav { list-style: none; margin: 0; padding: 0 0 7em 1.725em; background: url('../images/subnav-stripes.png') left bottom no-repeat; position: relative; top: 0; left: -1.725em; }
+.inside .sub-nav li { line-height: 1em; }
+.inside .sub-nav li a { color: #333; font-size: 0.9em; text-decoration: none; border-bottom: 1px solid; margin-bottom: 0.75em; display: inline-block; }
+.inside .sub-nav.large li a { font-size: 1em; line-height: 1.25em; } 
+.inside .sub-nav li.active a { border-bottom: 1px solid #fff; color: #777; }
+.inside .sub-nav li a:hover { border-bottom: 1px solid #fff; }
+.content { float: left; width: 45em; min-height: 41em; padding-left: 1em; background: #fff; }
+.content.quatered { width: 64em; }
+.content .column { float: left; width: 19.5em; padding: 0 3em 2em 0; }
+.content .column.wide { width: 43em; }
+.content .column p { font-size: 0.85em; line-height: 1.5em; }
+.content .column p.caption { margin-bottom: 0.35em; color: #777; font-style: italic; font-size: 0.95em; }
+.content .column.wide p { font-size: 0.85em; line-height: 1.5em; }
+.content .column.wide p.caption { margin-bottom: 0.35em; color: #777; font-style: italic; font-size: 0.95em; }
+.content .column p.separator { font-size: 0.5em; margin-bottom: 2.5em; letter-spacing: 0.5px; color: #999; }
+.content .column p.foot { margin-top: 2em; border-top: 4px double #e0e0e0; padding-top: 0.75em; }
+.content .column.quater { width: 13.75em; margin: 0 0.75em 1em; position: relative; padding: 0; }
+.content .column.half { width: 29.5em; margin: 0 0.75em 1em; padding: 0; }
+.content .column.quater .overlay { display: block; position: absolute; top: 5px; left: 5px; background: url('../images/object-overlay.png'); width: 220px; height: 126px; font-size: 14px; color: #fff; text-align: center; font-weight: bold; text-transform: uppercase; padding-top: 94px; 
+	opacity: 1; text-decoration: none; line-height: 1.3em; 
+	-webkit-transition: opacity 0.75s ease-in-out; 
+	   -moz-transition: opacity 0.75s ease-in-out;
+		 -o-transition: opacity 0.75s ease-in-out;
+}
+.content .column.quater:hover .overlay { opacity: 0; }
+.content .column.quater img { padding: 4px; background-color: #fff; border: 1px solid #CCC; border: 1px solid rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+.content .column.half h2 { margin: 2em 0 1em; font-size: 1.4em; color: #4D4D4D; font-weight: normal; }
+.content h1 { margin-top: 0; } 
+
+.license img { width: 9.5em; height: 13.25em; margin: 0 0.5em 0.25em 0; padding: 2px; background-color: #fff; border: 1px solid #CCC; border: 1px solid rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+	-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; 
+}
+.license a { border-bottom: 0 none; }
+
+address p { font-size: 0.9em; line-height: 1.2em; margin-bottom: 0.75em; }
+#contacts-form label { display: block; margin: 0.5em 0 0.25em; font-size: 0.9em; }
+#contacts-form input, textarea { width: 85%; padding: 0.5em; border: 1px solid #CCC; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+#submit { background: #4B7CB7; color: #fff; border: 1px solid #4B7CB7; border-radius: 2px; padding: 0.5em 1em; margin-top: 1em; cursor: pointer; }
+a { color: #5689a8; text-decoration: none; display: inline-block; border-bottom: 1px solid; line-height: 1.1em; }
+a.email-link { border-bottom: 0 none; }
+header nav ul li a { border-bottom: 0 none; }
+.news .prelog a { text-decoration: underline; border-bottom: 0 none; }
+
+#ymaps-map { position: relative; padding: 4px; background-color: #fff; border: 1px solid #CCC; border: 1px solid rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+#ymaps-map .overlay { position: absolute; bottom: -3px; right: -1px; background: url('../images/map-overlay.png') no-repeat; width: 490px; height: 173px; z-index: 99; }
+
+/* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+----------------------------------------------------------------------------------------*/
+.container {
+    padding: 0 0.809em;
+    max-width: 30em;
+    min-width: 64em;
+    margin: auto;
+  }
+
+aside { width: 100%; }
+
+
+/* 7. BROWSER AND NON-SEMANTIC STYLING
+----------------------------------------------------------------------------------------*/
+.cf:before, .cf:after { content: ""; display: block; }
+.cf:after { clear: both; }
+.ie6 .cf { zoom: 1 }
